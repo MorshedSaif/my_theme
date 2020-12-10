@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- top navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-lg-0"
+    >
+      <!-- sidebar open button -->
+      <button class="btn sidebar-open mr-2" id="sidebar-open">
+        <div class="dash"></div>
+        <div class="dash"></div>
+        <div class="dash"></div>
+      </button>
+
+      <!-- website logo and title -->
+      <a
+        class="navbar-brand d-flex align-items-center mr-auto"
+        href="index.html"
+      >
+        <img
+          src="assets/bootstrap.png"
+          alt="logo"
+          width="32"
+          height="32"
+          class="mr-1"
+        />
+        <span class="text-muted"> Bootstrap </span>
+      </a>
+
+      <!-- authentication buttons -->
+      <div class="auth">
+        <!-- sign up and sign in buttons -->
+        <div class="pre-auth">
+          <a href="sign-up.html" class="btn btn-sm btn-link text-info sign-up">
+            Sign up
+          </a>
+
+          <a href="sign-in.html" class="btn btn-sm btn-outline-info sign-in">
+            Sign in
+          </a>
+        </div>
+
+        <!-- profile and sign out button -->
+        <div class="post-auth">
+          <a
+            href="#"
+            class="text-decoration-none text-muted d-inline-block profile"
+          >
+            <img
+              src="assets/avatar.png"
+              width="32"
+              height="32"
+              class="rounded-circle"
+              alt="avatar"
+            />
+            Morshed
+          </a>
+
+          <a href="#" class="btn btn-sm btn-outline-info ml-2 sign-out">
+            Sign out
+          </a>
+        </div>
+      </div>
+
+      <!-- top navigation toggle button -->
+      <button
+        class="navbar-toggler ml-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </button>
+
+      <!-- top navigation utility -->
+      <div class="spacer-1"></div>
+
+      <!-- top navigation collapse -->
+      <div
+        class="collapse navbar-collapse flex-row-reverse"
+        id="navbarSupportedContent"
+      >
+        <!-- authentication buttons inside collapse -->
+        <div class="auth text-center my-2">
+          <!-- sign up and sign in buttons -->
+          <div class="pre-auth">
+            <a
+              href="sign-up.html"
+              class="btn btn-sm btn-link text-info sign-up"
+            >
+              Sign up
+            </a>
+
+            <a href="sign-in.html" class="btn btn-sm btn-outline-info sign-in">
+              Sign in
+            </a>
+          </div>
+
+          <!-- profile and sign out button -->
+          <div class="post-auth">
+            <a
+              href="#"
+              class="text-decoration-none text-muted d-inline-block profile"
+            >
+              <img
+                src="assets/avatar.png"
+                width="32"
+                height="32"
+                class="rounded-circle"
+                alt="avatar"
+              />
+              Morshed
+            </a>
+
+            <a href="#" class="btn btn-sm btn-outline-info ml-2 sign-out">
+              Sign out
+            </a>
+          </div>
+        </div>
+
+        <!-- nav links -->
+        <ul class="navbar-nav mx-auto">
+          <a class="nav-link active" href="index.html">
+            <li class="nav-item">Home</li>
+          </a>
+          <a class="nav-link" href="posts.html">
+            <li class="nav-item">Posts</li>
+          </a>
+          <a class="nav-link" href="videos.html">
+            <li class="nav-item">Videos</li>
+          </a>
+          <a class="nav-link" href="forum.html">
+            <li class="nav-item">Forum</li>
+          </a>
+          <a class="nav-link" href="shop.html">
+            <li class="nav-item">Shop</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- side navigation -->
+    <nav class="sidebar">
+      <!-- sidebar heading -->
+      <div
+        class="sidebar-heading d-flex align-items-center navbar-light bg-light"
+      >
+        <!-- sidebar close button -->
+        <button class="btn sidebar-close mr-2" id="sidebar-close">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <div class="dash"></div>
+        </button>
+
+        <!-- website logo and title inside sidebar-->
+        <a
+          class="navbar-brand d-flex align-items-center mr-auto"
+          href="index.html"
+        >
+          <img
+            src="assets/bootstrap.png"
+            alt="logo"
+            width="32"
+            height="32"
+            class="mr-1"
+          />
+          <span class="text-muted"> Bootstrap </span>
+        </a>
+      </div>
+
+      <!-- sidebar content -->
+      <div class="sidebar-content navbar-light bg-white">
+        <!-- search form -->
+        <form class="m-3 position-relative">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn position-absolute" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+
+        <!-- categories -->
+        <ul class="list-group list-group-flush list-unstyled">
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/c.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="c"
+            />
+            C
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/cpp.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="cpp"
+            />
+            C++
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/linux.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="linux"
+            />
+            Linux
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/java.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="java"
+            />
+            Java
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/android.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="android"
+            />
+            Android
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/swift.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="swift"
+            />
+            Swift
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/ios.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="ios"
+            />
+            Ios
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/html.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="html"
+            />
+            Html
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/pug.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="pug"
+            />
+            Pug
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/css.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="css"
+            />
+            Css
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/sass.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="sass"
+            />
+            Sass
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/js.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="js"
+            />
+            Javascript
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/react.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="react"
+            />
+            React
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/vue.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="vue"
+            />
+            Vue
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/python.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="python"
+            />
+            Python
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/django.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="django"
+            />
+            Django
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/php.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="php"
+            />
+            Php
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/laravel.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="laravel"
+            />
+            Laravel
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/photoshop.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="photoshop"
+            />
+            Photoshop
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/gimp.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="gimp"
+            />
+            Gimp
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/illustrator.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="illustrator"
+            />
+            Illustrator
+          </a>
+          <a href="#" class="list-group-item list-group-item-action text-muted">
+            <img
+              src="assets/inkscape.png"
+              class="mr-4"
+              width="32"
+              height="32"
+              alt="inkscape"
+            />
+            Inkscape
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <div class="spacer-2"></div>
+
+    <div class="banner"></div>
+
+    <div class="container my-5">
+      <!-- section heading -->
+      <h1
+        class="section-title text-muted d-flex justify-content-between align-items-center"
+      >
+        Recent Videos
+        <a href="#" class="btn btn-outline-info">Upload Video</a>
+      </h1>
+      <hr />
+      <div class="spacer-3"></div>
+
+      <!-- videos -->
+      <div id="videos">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <!-- first video -->
+          <div class="col mb-5">
+            <div class="card text-justify">
+              <a href="#" class="text-decoration-none text-dark">
+                <!-- video thumbnail -->
+                <img
+                  src="assets/placeholder.png"
+                  class="card-img-top"
+                  alt="placeholder"
+                />
+
+                <!-- video body -->
+                <div class="card-body text-justify">
+                  <!-- video title -->
+                  <p class="card-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, officiis?...
+                  </p>
+                </div>
+              </a>
+              <!-- video control buttons -->
+              <div class="text-center mb-3">
+                <a href="#" class="btn btn-outline-info btn-sm rounded-circle">
+                  <i class="fa fa-plus"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-success btn-sm rounded-circle"
+                >
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-danger btn-sm rounded-circle"
+                >
+                  <i class="fa fa-trash"></i>
+                </a>
+              </div>
+              <a href="#" class="btn btn-light btn-block text-muted">
+                View Full Playlist
+              </a>
+            </div>
+          </div>
+
+          <!-- second video -->
+          <div class="col mb-5">
+            <div class="card text-justify">
+              <a href="#" class="text-decoration-none text-dark">
+                <!-- video thumbnail -->
+                <img
+                  src="assets/placeholder.png"
+                  class="card-img-top"
+                  alt="placeholder"
+                />
+
+                <!-- video body -->
+                <div class="card-body text-justify">
+                  <!-- video title -->
+                  <p class="card-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, officiis?...
+                  </p>
+                </div>
+              </a>
+              <!-- video control buttons -->
+              <div class="text-center mb-3">
+                <a href="#" class="btn btn-outline-info btn-sm rounded-circle">
+                  <i class="fa fa-plus"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-success btn-sm rounded-circle"
+                >
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-danger btn-sm rounded-circle"
+                >
+                  <i class="fa fa-trash"></i>
+                </a>
+              </div>
+              <a href="#" class="btn btn-light btn-block text-muted">
+                View Full Playlist
+              </a>
+            </div>
+          </div>
+
+          <!-- third video -->
+          <div class="col mb-5">
+            <div class="card text-justify">
+              <a href="#" class="text-decoration-none text-dark">
+                <!-- video thumbnail -->
+                <img
+                  src="assets/placeholder.png"
+                  class="card-img-top"
+                  alt="placeholder"
+                />
+
+                <!-- video body -->
+                <div class="card-body text-justify">
+                  <!-- video title -->
+                  <p class="card-title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam, officiis?...
+                  </p>
+                </div>
+              </a>
+              <!-- video control buttons -->
+              <div class="text-center mb-3">
+                <a href="#" class="btn btn-outline-info btn-sm rounded-circle">
+                  <i class="fa fa-plus"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-success btn-sm rounded-circle"
+                >
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-danger btn-sm rounded-circle"
+                >
+                  <i class="fa fa-trash"></i>
+                </a>
+              </div>
+              <a href="#" class="btn btn-light btn-block text-muted">
+                View Full Playlist
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- see all videos link -->
+      <a href="#" class="see-all d-block text-center text-info my-5">
+        See All Videos
+        <i class="fa fa-angle-right"></i>
+      </a>
+
+      <!-- section heading -->
+      <h1
+        class="section-title text-muted d-flex justify-content-between align-items-center"
+      >
+        Recent Posts
+        <a href="#" class="btn btn-outline-info">Create Post</a>
+      </h1>
+      <hr />
+      <div class="spacer-2"></div>
+
+      <!-- posts -->
+      <div id="posts">
+        <!-- first post -->
+        <div class="card mb-5 text-justify">
+          <div class="row no-gutters">
+            <!-- post thumbnail -->
+            <div class="col-md-5 col-lg-4">
+              <img
+                src="assets/placeholder.png"
+                class="card-img"
+                alt="placeholder"
+              />
+            </div>
+            <!-- post details -->
+            <div class="col-md-7 col-lg-8">
+              <div class="card-body text-justify">
+                <!-- post title -->
+                <h5 class="card-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum, quasi!...
+                </h5>
+                <!-- post info and post control buttons -->
+                <p
+                  class="post_info_control_buttons d-flex align-items-center justify-content-between"
+                >
+                  <small class="post-info text-muted">
+                    <img
+                      src="assets/avatar.png"
+                      class="mr-1"
+                      alt="avatar"
+                      width="28"
+                    />
+                    Created by User 5 hours ago
+                  </small>
+                  <span class="control-buttons">
+                    <a
+                      href="#"
+                      class="btn btn-outline-warning btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-thumb-tack"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-success btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-pencil"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-danger btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </span>
+                </p>
+                <!-- post content -->
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quidem cum provident eum ullam iusto maiores voluptas fuga
+                  delectus consequatur. Cumque?...
+                </p>
+                <p class="edit_info">
+                  <small class="text-muted">
+                    Edited by AnotherUser 5 hours ago
+                  </small>
+                </p>
+                <!-- read more link and category images -->
+                <div
+                  class="read_more_category_badges d-flex align-items-center justify-content-between"
+                >
+                  <a href="#" class="read-more btn btn-sm btn-outline-info">
+                    Read More
+                  </a>
+                  <span class="category-badges">
+                    <img src="assets/django.png" width="25" alt="django" />
+                    <img src="assets/react.png" width="25" alt="react" />
+                    <img
+                      src="assets/postgresql.png"
+                      width="25"
+                      alt="postgresql.png"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- second post -->
+        <div class="card mb-5 text-justify">
+          <div class="row no-gutters">
+            <!-- post details -->
+            <div class="col">
+              <div class="card-body text-justify">
+                <!-- post title -->
+                <h5 class="card-title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum, quasi!...
+                </h5>
+                <!-- post info and post control buttons -->
+                <p
+                  class="post_info_control_buttons d-flex align-items-center justify-content-between"
+                >
+                  <small class="post-info text-muted">
+                    <img
+                      src="assets/avatar.png"
+                      class="mr-1"
+                      alt="avatar"
+                      width="28"
+                    />
+                    Created by User 5 hours ago
+                  </small>
+                  <span class="control-buttons">
+                    <a
+                      href="#"
+                      class="btn btn-outline-warning btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-thumb-tack"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-success btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-pencil"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-danger btn-sm rounded-circle"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </span>
+                </p>
+                <!-- post content -->
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quidem cum provident eum ullam iusto maiores voluptas fuga
+                  delectus consequatur. Cumque?...
+                </p>
+                <p class="edit_info">
+                  <small class="text-muted">
+                    Edited by AnotherUser 5 hours ago
+                  </small>
+                </p>
+                <!-- read more link and category images -->
+                <div
+                  class="read_more_category_badges d-flex align-items-center justify-content-between"
+                >
+                  <a href="#" class="read-more btn btn-sm btn-outline-info">
+                    Read More
+                  </a>
+                  <span class="category-badges">
+                    <img src="assets/laravel.png" width="25" alt="laravel" />
+                    <img src="assets/vue.png" width="25" alt="vue" />
+                    <img src="assets/mysql.png" width="25" alt="mysql.png" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- see all posts link -->
+      <a href="#" class="see-all d-block text-center text-info my-5">
+        See All Posts
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="navbar navbar-light bg-light flex-column justify-content-center"
+    >
+      <div class="platform-links my-3">
+        <a href="#" class="text-decoration-none text-muted">
+          <img
+            src="assets/youtube-play.png"
+            width="32"
+            height="32"
+            alt="youtube"
+          />
+        </a>
+        <a href="#" class="text-decoration-none text-muted">
+          <img src="assets/patreon.png" width="32" height="32" alt="patreon" />
+        </a>
+        <a href="#" class="text-decoration-none text-muted">
+          <img src="assets/github.png" width="32" height="32" alt="github" />
+        </a>
+        <a href="#" class="text-decoration-none text-muted">
+          <img src="assets/fb.png" width="32" height="32" alt="facebook" />
+        </a>
+      </div>
+      <p class="text-justify text-muted p-3">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
+        impedit!
+      </p>
+    </footer>
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.overlayScrollbars.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

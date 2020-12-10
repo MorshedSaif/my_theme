@@ -1,0 +1,10 @@
+// FOOTER
+footer.navbar {
+	.platform-links {
+		a:link {
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+	}
+}

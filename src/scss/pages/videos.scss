@@ -1,0 +1,24 @@
+// IMPORTS
+@import "../partials/_colors";
+@import "../partials/_utilities";
+
+@import "../components/footer.scss";
+@import "../components/sidenav.scss";
+@import "../components/topnav.scss";
+
+// CONTAINER
+.container {
+  .tab-content {
+    #videos,
+    #playlists {
+      .card {
+        background-color: transparent;
+        border: none;
+
+        .card-body {
+          padding: 1.25rem 0 0 0;
+        }
+      }
+    }
+  }
+}

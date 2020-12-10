@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- top navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <!-- sidebar open button -->
+      <button class="btn sidebar-open mr-2" id="sidebar-open">
+        <div class="dash"></div>
+        <div class="dash"></div>
+        <div class="dash"></div>
+      </button>
+
+      <!-- website logo and title -->
+      <a
+        class="navbar-brand d-flex align-items-center mr-auto"
+        href="index.html"
+      >
+        <img
+          src="assets/bootstrap.png"
+          alt="logo"
+          width="32"
+          height="32"
+          class="mr-1"
+        />
+        <span class="text-muted"> Bootstrap </span>
+      </a>
+
+      <!-- authentication buttons -->
+      <div class="auth">
+        <!-- sign up and sign in buttons -->
+        <div class="pre-auth">
+          <a href="sign-up.html" class="btn btn-sm btn-link text-info sign-up">
+            Sign up
+          </a>
+
+          <a href="sign-in.html" class="btn btn-sm btn-outline-info sign-in">
+            Sign in
+          </a>
+        </div>
+
+        <!-- profile and sign out button -->
+        <div class="post-auth">
+          <a
+            href="#"
+            class="text-decoration-none text-muted d-inline-block profile"
+          >
+            <img
+              src="assets/avatar.png"
+              width="32"
+              height="32"
+              class="rounded-circle"
+              alt="avatar"
+            />
+            Morshed
+          </a>
+
+          <a href="#" class="btn btn-sm btn-outline-info ml-2 sign-out">
+            Sign out
+          </a>
+        </div>
+      </div>
+
+      <!-- top navigation toggle button -->
+      <button
+        class="navbar-toggler ml-2"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </button>
+
+      <!-- top navigation utility -->
+      <div class="spacer-1"></div>
+
+      <!-- top navigation collapse -->
+      <div
+        class="collapse navbar-collapse flex-row-reverse"
+        id="navbarSupportedContent"
+      >
+        <!-- authentication buttons inside collapse -->
+        <div class="auth text-center">
+          <div class="pre-auth">
+            <a
+              href="sign-up.html"
+              class="btn btn-sm btn-link text-info sign-up"
+            >
+              Sign up
+            </a>
+
+            <a href="sign-in.html" class="btn btn-sm btn-outline-info sign-in">
+              Sign in
+            </a>
+          </div>
+
+          <div class="post-auth">
+            <a
+              href="index.html"
+              class="text-decoration-none text-muted d-inline-block ml-2 profile"
+            >
+              <img
+                src="assets/avatar.png"
+                width="32"
+                height="32"
+                class="rounded-circle"
+                alt="avatar"
+              />
+              Morshed
+            </a>
+
+            <a href="#" class="btn btn-sm btn-outline-info ml-2 sign-out">
+              Sign out
+            </a>
+          </div>
+        </div>
+
+        <!-- search form -->
+        <form class="position-relative mx-auto">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn position-absolute" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- side navigation -->
+    <nav class="sidebar">
+      <!-- sidebar heading -->
+      <div
+        class="sidebar-heading d-flex align-items-center navbar-light bg-light"
+      >
+        <!-- sidebar close button -->
+        <button class="btn sidebar-close mr-2" id="sidebar-close">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <div class="dash"></div>
+        </button>
+
+        <!-- website logo and title inside sidebar-->
+        <a
+          class="navbar-brand d-flex align-items-center mr-auto"
+          href="index.html"
+        >
+          <img
+            src="assets/bootstrap.png"
+            alt="logo"
+            width="32"
+            height="32"
+            class="mr-1"
+          />
+          <span class="text-muted"> Bootstrap </span>
+        </a>
+      </div>
+
+      <!-- sidebar content -->
+      <div class="sidebar-content navbar-light bg-white">
+        <!-- page links -->
+        <ul class="list-group list-group-flush list-unstyled mt-4">
+          <a
+            class="list-group-item list-group-item-action active"
+            href="index.html"
+          >
+            Home
+          </a>
+          <a class="list-group-item list-group-item-action" href="#"> Posts </a>
+          <a class="list-group-item list-group-item-action" href="#">
+            Videos
+          </a>
+          <a class="list-group-item list-group-item-action" href="#"> Forum </a>
+          <a class="list-group-item list-group-item-action" href="shop.html">
+            Shop
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <button class="btn btn-info cart-btn">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="ml-1">0</span>
+    </button>
+
+    <!-- side navigation -->
+    <nav class="cart-panel">
+      <!-- sidebar heading -->
+      <div
+        class="cart-panel-heading d-flex flex-row-reverse align-items-center navbar-light bg-light"
+      >
+        <!-- sidebar close button -->
+        <button class="btn cart-panel-close ml-2" id="cart-panel-close">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <div class="dash"></div>
+        </button>
+
+        <div class="ml-2 mr-auto">
+          <p class="m-0">
+            <i class="fa fa-shopping-cart mr-1"></i> 0
+          </p>
+
+          <p class="m-0">$ 0.00</p>
+        </div>
+      </div>
+
+      <!-- sidebar content -->
+      <div class="cart-panel-content navbar-light bg-white">
+        <div class="card m-3">
+          <img
+            class="card-img-top"
+            src="assets/products/hats/brown-cowboy.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">name, model and a short details of the product</h5>
+            <p class="card-text">
+              <p class="text-center">
+                x 1
+              </p>
+              <p class="text-center">
+                $ 320.00
+              </p>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-success rounded-circle">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-danger rounded-circle">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary rounded-circle">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img
+            class="card-img-top"
+            src="assets/products/hats/palm-tree-cap.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">name, model and a short details of the product</h5>
+            <p class="card-text">
+              <p class="text-center">
+                x 1
+              </p>
+              <p class="text-center">
+                $ 320.00
+              </p>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-success rounded-circle">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-danger rounded-circle">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary rounded-circle">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img
+            class="card-img-top"
+            src="assets/products/sneakers/yeezy.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">name, model and a short details of the product</h5>
+            <p class="card-text">
+              <p class="text-center">
+                x 1
+              </p>
+              <p class="text-center">
+                $ 320.00
+              </p>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-success rounded-circle">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-danger rounded-circle">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary rounded-circle">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img
+            class="card-img-top"
+            src="assets/products/mens/long-sleeve.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">name, model and a short details of the product</h5>
+            <p class="card-text">
+              <p class="text-center">
+                x 1
+              </p>
+              <p class="text-center">
+                $ 320.00
+              </p>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-success rounded-circle">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-danger rounded-circle">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary rounded-circle">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-3">
+          <img
+            class="card-img-top"
+            src="assets/products/womens/blue-tank.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">name, model and a short details of the product</h5>
+            <p class="card-text">
+              <p class="text-center">
+                x 1
+              </p>
+              <p class="text-center">
+                $ 320.00
+              </p>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-success rounded-circle">
+                <i class="fa fa-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-danger rounded-circle">
+                <i class="fa fa-minus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary rounded-circle">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-3 border-0">
+          <a href="#" class="btn btn-block btn-outline-info">
+            Checkout ?
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <div class="spacer-2"></div>
+
+    <div class="container-fluid my-3">
+      <!-- section heading -->
+      <h3
+        class="section-title text-muted d-flex justify-content-between align-items-center mt-5"
+      >
+        Category 1
+        <span class="badge badge-pill badge-success">15</span>
+      </h3>
+      <hr />
+      <div class="spacer-3"></div>
+
+      <div class="card-columns">
+        <div class="card">
+          <img class="card-img-top" src="assets/products/mens/camo-vest.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/sneakers/timberlands.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/womens/red-polka-dot-dress.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/jackets/grey-jean-jacket.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/hats/brown-brim.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- section heading -->
+      <h3
+        class="section-title text-muted d-flex justify-content-between align-items-center mt-5"
+      >
+        Category 2
+        <span class="badge badge-pill badge-success">15</span>
+      </h3>
+      <hr />
+      <div class="spacer-3"></div>
+
+      <div class="card-columns">
+        <div class="card">
+          <img class="card-img-top" src="assets/products/mens/roll-up-jean-shirt.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/sneakers/adidas-nmd.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/womens/floral-blouse.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/jackets/blue-jean-jacket.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/products/hats/blue-beanie.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.overlayScrollbars.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
